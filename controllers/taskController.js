@@ -1,4 +1,3 @@
-// controllers/taskController.mjs
 import * as taskModel from "../models/taskModel.js";
 
 export const deleteTask = (req, res) => {

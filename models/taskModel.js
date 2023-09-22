@@ -29,8 +29,6 @@ export const addTask = (task, callback) => {
 };
 
 // Supprimer une tâche de la base de données
-//export const deleteTask = (taskId, callback) => {};
-
 export const deleteTask = (taskId, callback) => {
   const sql = "DELETE FROM tasks WHERE id = ?";
 

@@ -14,12 +14,6 @@ router.get("/add", (req, res) => {
 // ajouter une tâche dans la base de données
 router.post("/add", taskController.addTask);
 
-// supprimer une tâche de la base de données
-/*router.post("/delete/:id", (req, res) => {
-  console.log(req);
-  res.redirect("/");
-});*/
-
 router.post("/delete/:id", taskController.deleteTask);
 
 export default router;
