@@ -1,25 +1,12 @@
 import express from "express";
-import * as taskController from "./controllers/taskController.js";
-
 const router = express.Router();
 
-// affichier la liste des tâches sur la page d'accueil
-router.get("/", taskController.renderListPage);
+// affichier la liste des tâches sur la page d'accueil ==> path: /
 
-// afficher la page d'ajout de tâche sur la route /add
-router.get("/add", (req, res) => {
-  res.render("add");
-});
+// afficher la page d'ajout de tâche ==> path: /add
 
-// ajouter une tâche dans la base de données
-router.post("/add", taskController.addTask);
+// ajouter une tâche dans la base de données ==> path: /add
 
-// supprimer une tâche de la base de données
-/*router.post("/delete/:id", (req, res) => {
-  console.log(req);
-  res.redirect("/");
-});*/
-
-router.post("/delete/:id", taskController.deleteTask);
+// supprimer une tâche de la base de données ==> path: /delete/:id
 
 export default router;
